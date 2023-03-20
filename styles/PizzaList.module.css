@@ -1,0 +1,21 @@
+.container{
+    color: black;
+    margin-top: 40px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.desc{
+    padding: 30px 0;
+    font-size: 24px;
+    color: #444;
+    width: 70%;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
