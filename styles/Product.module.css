@@ -101,3 +101,30 @@
     display: flex;
     align-items: center;
 }
+@media screen and (max-width:480px) {
+    .container{
+        height: auto;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .imgContainer{
+        width: 70vw;
+        height: 70vw;
+    }
+    .sizes{
+        width: 90%;
+    }
+    .ingredients{
+        flex-direction: column;
+        
+    }
+    
+    .option{
+        font-size: 18px;
+        margin: 10px;
+    }
+    .quantity,.button{
+        height: 50px;
+    }
+}

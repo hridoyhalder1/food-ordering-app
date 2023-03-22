@@ -6,6 +6,7 @@
     background-position: center;
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 .arrowContainer{
     position: absolute;
@@ -29,4 +30,16 @@
     width: 100vh;
     margin-left: 200px;
     margin-right: 590px;
+}
+@media screen and (max-width:480px) {
+    .container{
+        height: 50vh;
+    }
+    .imgContainer{
+        width: 800px;
+        height: 200px;
+        margin-left: 100px;
+        margin-right: 200px;
+        
+    }
 }
