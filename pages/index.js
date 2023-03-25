@@ -3,10 +3,11 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Featured from '@/components/Featured'
 import PizzaList from '@/components/PizzaList'
+import axios from 'axios'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({pizzaList}) {
   return (
     <>
       <Head>
@@ -17,7 +18,16 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet"></link>
       </Head>
       <Featured></Featured>
-      <PizzaList></PizzaList>
+      <PizzaList pizzaList={pizzaList}></PizzaList>
     </>
   )
+}
+
+export const getServerSideProps = async() => {
+  const res = await axios.get('http://localhost:3000/api/products');
+  return{
+    props:{
+      pizzaList:res.data,
+    }
+  }
 }
