@@ -66,6 +66,22 @@
     text-align: center;
     border-radius: 5px;
 }
+.paymentMethods{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.payButton{
+    padding: 10px;
+    background-color: #d1411e;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
 @media screen and (max-width:480px) {
     .container{
         flex-direction: column;
