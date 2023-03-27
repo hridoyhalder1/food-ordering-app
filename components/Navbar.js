@@ -21,10 +21,16 @@ const Navbar = () => {
             </div>
             <div className={styles.item}>
                 <ul className={styles.list}>
-                    <li className={styles.listItem}>Home</li>
+                    <Link href='/'>
+                        <li className={styles.listItem}>Home</li>
+                    </Link>
                     <li className={styles.listItem}>Products</li>
-                    <li className={styles.listItem}>Menu</li>
-                    <Image src='/img/logo.png' alt='' width={160} height={69}></Image>
+                    <Link href='/'>
+                        <li className={styles.listItem}>Menu</li>
+                    </Link>
+                    <Link href='/'>
+                        <Image src='/img/logos.png' alt='' width={100} height={70}></Image>
+                    </Link>
                     <li className={styles.listItem}>Events</li>
                     <li className={styles.listItem}>Blog</li>
                     <li className={styles.listItem}>Contact</li>
