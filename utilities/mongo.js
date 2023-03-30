@@ -36,12 +36,13 @@ async function dbConnect() {
 
   try {
     cached.conn = await cached.promise
+    cached.conn = await cached.promise
   } catch (e) {
     cached.promise = null
     throw e
   }
 
-  return cached.conn
+return cached.conn
 }
 
 export default dbConnect
