@@ -4,10 +4,14 @@ import { Inter } from 'next/font/google'
 import Featured from '@/components/Featured'
 import PizzaList from '@/components/PizzaList'
 import axios from 'axios'
+import { useState } from 'react'
+import Add from '@/components/Add'
+import AddButton from '@/components/AddButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ pizzaList,admin }) {
+  const [close, setClose] = useState(true);
   return (
     <>
       <Head>
@@ -18,7 +22,9 @@ export default function Home({ pizzaList,admin }) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet"></link>
       </Head>
       <Featured></Featured>
+      {admin && <AddButton setClose={setClose}/>}
       <PizzaList pizzaList={pizzaList}></PizzaList>
+      {!close && <Add setClose={setClose}/>}
     </>
   )
 }
